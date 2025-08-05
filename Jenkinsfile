@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy Container') {
             steps {
                 sh 'docker rm -f jenkins-demo-app || true'
-                sh 'docker run -d --name jenkins-demo-app -p 8080:8080 jenkins-demo-app'
+                sh 'docker run -d --name jenkins-demo-app -p 8000:8080 jenkins-demo-app'
             }
         }
     }
